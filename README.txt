@@ -1,0 +1,1 @@
+Upload index.html, robots.txt, sitemap.xml to the repo root. In Settings → Pages: Source = Deploy from a branch, Branch = main, Folder = /(root).

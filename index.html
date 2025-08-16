@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perth Gardening &amp; Reticulation | Bassendean, Bayswater &amp; Dianella (NOR Perth WA)</title>
+  <meta name="description" content="Gardening & reticulation in Bassendean, Bayswater & Dianella — lawn, hedging, makeovers & water‑wise irrigation. Fast quotes, photo reports, insured.">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#0b1510; --surface:rgba(20,37,26,.72); --leaf:#13271b;
+      --primary:#2e7d32; --accent:#ffd54f;
+      --text:#e9f4ec; --sub:#cfe6d6; --outline:#2a4a34;
+      --radius:22px; --blur:12px;
+    }
+    * { box-sizing:border-box; }
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; letter-spacing:.01em; line-height:1.6; }
+    a { color:inherit; text-decoration:none; }
+    .container { max-width:1200px; margin:0 auto; padding:0 18px; }
+
+    .topbar { background:transparent; border-bottom:1px solid rgba(40,74,52,.35); font-size:12px; backdrop-filter: blur(var(--blur)); }
+    .topbar .row { display:flex; gap:12px; align-items:center; justify-content:space-between; padding:8px 0; }
+    .pill { display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border:1px solid rgba(40,74,52,.4); border-radius:999px; background:rgba(19,39,27,.65); color:var(--sub); font-size:12px; }
+
+    header.glass { position:sticky; top:0; z-index:50; background:rgba(20,37,26,.55); border-bottom:1px solid rgba(40,74,52,.45); backdrop-filter: blur(var(--blur)); }
+    .nav { display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
+    .nav a { opacity:.9; }
+    .nav a:hover { opacity:1; text-decoration:underline; }
+
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:12px 18px; border-radius:999px; font-weight:700; text-decoration:none; border:0; background:linear-gradient(180deg,#3fa14b,#2e7d32); color:#fff; box-shadow: 0 8px 24px rgba(46,125,50,.25); transition:transform .2s ease, box-shadow .2s ease, opacity .2s; }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 12px 34px rgba(46,125,50,.35); }
+    .btn.outline { background:transparent; color:#e9f4ec; border:1px solid rgba(63,161,75,.6); box-shadow:none; }
+
+    h1 { font-size:38px; line-height:1.06; margin:12px 0 8px; letter-spacing:-0.02em; }
+    h1.title { background: linear-gradient(90deg, #f5fff8, var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .accent-bar { width:88px; height:6px; background: var(--accent); border-radius:999px; margin-top:10px; opacity:.9; }
+    @media (min-width:700px){ h1 { font-size:56px; } }
+    h2 { font-size:28px; margin:0; letter-spacing:-0.01em; }
+    p.lead { color:var(--sub); font-size:18px; margin:12px 0 0; max-width:62ch; }
+
+    .grid { display:grid; gap:18px; }
+    .cards-4 { grid-template-columns: repeat(2, 1fr); }
+    .cards-3 { grid-template-columns: 1fr; }
+
+    .card { border:1px solid rgba(40,74,52,.45); border-radius:var(--radius); background:rgba(19,39,27,.55); backdrop-filter: blur(10px); padding:18px; }
+    .service { border:1px solid rgba(40,74,52,.45); border-radius:var(--radius); background:rgba(20,37,26,.55); overflow:hidden; backdrop-filter: blur(8px); transition: transform .25s ease, box-shadow .25s ease; box-shadow: 0 6px 22px rgba(0,0,0,.18); }
+    .service:hover { transform: translateY(-2px); box-shadow: 0 18px 42px rgba(0,0,0,.28); }
+
+    .img-wrap { position:relative; width:100%; overflow:hidden; background:#0f1a12; border-bottom:1px solid rgba(40,74,52,.45); }
+    .img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+    .img-wrap.aspect { aspect-ratio: 16/9; }
+
+    @media (max-width: 900px) { .cards-4 { grid-template-columns:1fr; } }
+    @media (min-width: 700px) { .cards-3 { grid-template-columns: repeat(3, 1fr); } }
+
+    section { padding: clamp(48px, 7vw, 96px) 0; }
+    ul.clean { margin:12px 0 0; padding-left:0; list-style:none; color:var(--sub); font-size:14px; }
+    ul.clean li { display:flex; gap:8px; align-items:flex-start; }
+    .about { background:rgba(19,39,27,.6); border-top:1px solid rgba(40,74,52,.45); border-bottom:1px solid rgba(40,74,52,.45); }
+    footer { background:rgba(20,37,26,.55); border-top:1px solid rgba(40,74,52,.45); padding:28px 0; backdrop-filter: blur(var(--blur)); }
+
+    .muted { color:var(--sub); font-size:12px; }
+    html { scroll-behavior: smooth; }
+    section { scroll-margin-top: 84px; }
+
+    .band { background: rgba(20,37,26,.55); border-top: 1px solid rgba(40,74,52,.45); border-bottom: 1px solid rgba(40,74,52,.45); backdrop-filter: blur(var(--blur)); }
+    .cta-band { padding: 26px 0; }
+    .cta { display:flex; gap:12px; flex-wrap: wrap; align-items:center; justify-content:space-between; }
+
+    .sticky-bar { position:fixed; left:12px; right:12px; bottom:12px; display:flex; gap:12px; padding:10px; background:rgba(20,37,26,.6); border:1px solid rgba(40,74,52,.45); border-radius:999px; backdrop-filter: blur(12px); box-shadow: 0 10px 26px rgba(0,0,0,.28); }
+    .sticky-bar a { flex:1; text-align:center; padding:10px 14px; border-radius:999px; font-weight:700; text-decoration:none; }
+    .sticky-bar a.outline { background:transparent; color:#e9f4ec; border:1px solid rgba(63,161,75,.6); }
+    @media (min-width: 900px){ .sticky-bar { display:none; } }
+
+    /* Strata polish */
+    .eyebrow { font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--sub); }
+    .shadow { box-shadow: 0 10px 34px rgba(0,0,0,.24); }
+    .kpi-band { padding: 12px 0; }
+    .kpi { display:flex; align-items:center; gap:10px; padding:10px 12px; border:1px solid rgba(40,74,52,.45); border-radius:999px; background:rgba(19,39,27,.6); color:var(--sub); font-size:13px; }
+    .grid-3 { display:grid; gap:18px; grid-template-columns: 1fr; }
+    @media (min-width: 900px){ .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+    .badge { display:inline-block; padding:6px 10px; background:rgba(19,39,27,.6); border:1px solid rgba(40,74,52,.45); border-radius:999px; color:var(--sub); font-size:12px; }
+
+    /* Hero cover */
+    .hero-cover { position:relative; border-radius:28px; overflow:hidden; padding: clamp(40px, 8vw, 100px); border:1px solid rgba(40,74,52,.45);
+      background-image: linear-gradient(180deg, rgba(10,18,13,.55), rgba(10,18,13,.85)), var(--hero-img);
+      background-size: cover; background-position:center; }
+    .hero-cover .lead { max-width: 62ch; }
+    /* --- Sexy tabs for combined Areas/Bassendean/Bayswater --- */
+    .tabs { display:inline-flex; gap:8px; padding:6px; border-radius:999px; border:1px solid rgba(40,74,52,.45); background:rgba(19,39,27,.55); backdrop-filter: blur(8px); }
+    .tab { appearance:none; border:0; padding:10px 16px; border-radius:999px; font-weight:700; color:var(--sub); background:transparent; cursor:pointer; transition: transform .2s ease, box-shadow .2s ease, background .2s; }
+    .tab:hover { transform: translateY(-1px); }
+    .tab.active { background:linear-gradient(180deg,#3fa14b,#2e7d32); color:#fff; box-shadow: 0 10px 30px rgba(46,125,50,.35); }
+    .panes { margin-top:18px; }
+    .pane { display:none; animation: fade .25s ease; }
+    .pane.show { display:block; }
+    @keyframes fade { from { opacity:0; transform: translateY(6px);} to { opacity:1; transform:none;} }
+    /* Addictive polish */
+    /* Subtle noise + vignette */
+    body::before{content:"";position:fixed;inset:-20%;pointer-events:none;background:radial-gradient(100% 60% at 50% 0%,rgba(255,255,255,.04),rgba(0,0,0,0)),radial-gradient(120% 80% at 50% 120%,rgba(0,0,0,.25),rgba(0,0,0,0));z-index:-1}
+    /* Scroll progress */
+    .progress{position:fixed;inset:0 auto auto 0;height:3px;width:0;background:linear-gradient(90deg,#9ef89e,var(--accent));box-shadow:0 6px 16px rgba(63,161,75,.45);z-index:9999}
+    /* Reveals */
+    .reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.in{opacity:1;transform:none}
+    /* Image polish */
+    .service .img-wrap img{filter:saturate(1.05) contrast(1.02)}
+    .service .img-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.18));opacity:0;transition:opacity .25s}
+    .service:hover .img-wrap::after{opacity:.25}
+    /* Cards */
+    .card,.service{transition:transform .25s ease,box-shadow .25s ease}
+    .card:hover,.service:hover{transform:translateY(-3px);box-shadow:0 16px 46px rgba(0,0,0,.28)}
+    /* Buttons */
+    .btn.glow{position:relative}
+    .btn.glow::after{content:"";position:absolute;inset:-2px;border-radius:999px;background:radial-gradient(60% 50% at 50% 10%,rgba(255,255,255,.35),rgba(255,255,255,0));opacity:.4;filter:blur(6px);z-index:-1}
+    .sticky-bar .btn:last-child{animation:pulse 1.8s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(63,161,75,.6)}70%{box-shadow:0 0 0 16px rgba(63,161,75,0)}100%{box-shadow:0 0 0 0 rgba(63,161,75,0)}}
+    /* Testimonials slider */
+    .slider{position:relative;overflow:hidden;border-radius:var(--radius);border:1px solid rgba(40,74,52,.45);background:rgba(19,39,27,.55);backdrop-filter:blur(8px)}
+    .track{display:flex;gap:18px;will-change:transform;transition:transform .6s ease}
+    .slide{min-width:100%;padding:22px}
+    @media (min-width:900px){.slide{min-width:50%}}
+    .quote{font-size:18px;line-height:1.5}
+    .stars{letter-spacing:.1em}
+    /* Flow polish after How it works */
+    .section-div{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent);margin:clamp(28px,4vw,40px) 0}
+    .cards-2{display:grid;grid-template-columns:1fr;gap:18px}
+    @media(min-width:900px){.cards-2{grid-template-columns:repeat(2,1fr)}}
+    /* Lighter lists for suburbs */
+    .cols .heading{font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:var(--sub);margin-bottom:6px}
+    /* Map-styled tabs wrapper */
+    .tabs-wrap{
+      border:1px solid rgba(40,74,52,.45);
+      background:
+        radial-gradient(120% 100% at 80% -10%, rgba(255,255,255,.06), rgba(255,255,255,0)),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23ffffff14' stroke-width='1'%3E%3Cpath d='M0 20H160M0 40H160M0 60H160M0 80H160M0 100H160M0 120H160M0 140H160M20 0V160M40 0V160M60 0V160M80 0V160M100 0V160M120 0V160M140 0V160'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: cover, 160px 160px; background-position:center; border-radius:28px; padding:14px; margin-bottom:12px; backdrop-filter: blur(8px);
+    }
+    </style>
+  <meta property="og:title" content="Perth Gardening &amp; Reticulation — Bassendean, Bayswater &amp; Dianella">
+  <meta property="og:description" content="Bassendean, Bayswater & Dianella lawn care, hedging, makeovers & reticulation. Fast quotes, photo reports, insured.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_AU">
+  <meta name="geo.region" content="AU-WA">
+  <meta name="geo.placename" content="Perth">
+  
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Gardening & Reticulation (NOR Perth)",
+    "areaServed":[
+      {"@type":"GeoCircle","name":"Bassendean 5km","geoMidpoint":{"@type":"GeoCoordinates","latitude":-31.904,"longitude":115.955},"geoRadius":5000},
+      {"@type":"GeoCircle","name":"Bayswater 5km","geoMidpoint":{"@type":"GeoCoordinates","latitude":-31.918,"longitude":115.913},"geoRadius":5000},
+      {"@type":"GeoCircle","name":"Dianella 5km","geoMidpoint":{"@type":"GeoCoordinates","latitude":-31.888,"longitude":115.864},"geoRadius":5000}
+    ],
+    "provider":{"@type":"LocalBusiness","name":"Perth Gardening and Reticulation"}
+  }
+  </script>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <div class="topbar">
+    <div class="container">
+      <div class="row">
+        <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
+          <span class="muted">Perth Gardening and Reticulation</span>
+          <a class="pill" href="tel:+61421308173" aria-label="Call Perth Gardening and Reticulation">📞 0421 308 173</a>
+          <a class="pill" href="mailto:perthreticulationandirrigation@outlook.com" aria-label="Email Perth Gardening and Reticulation">✉ Email</a>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="pill">Fully insured</span>
+          <span class="pill">Police cleared</span>
+          <span class="pill">Waterwise</span>
+          <span class="pill">On-time</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="glass">
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; padding:12px 0;">
+      <a href="#home" style="font-weight:800; text-decoration:none;">Perth Gardening and Reticulation</a>
+      <nav class="nav"><a href="#services">Services</a><a href="#areas">Areas</a><a href="#process">Process</a><a href="#contact" class="btn outline">Contact</a></nav>
+      <a href="#contact" class="btn">Request Booking</a>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-cover" style="--hero-img: url('https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0');">
+        <span class="pill">Beautiful, water-wise gardens—without the hassle</span>
+        <h1 class="title">Perth garden care, tidy makeovers &amp; smart reticulation</h1>
+        <div class="accent-bar"></div>
+        <p class="lead"><strong>NOR Perth:</strong> lawns, hedges, clean‑ups &amp; water‑wise reticulation. Fast quotes. Photo reports.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
+          <a href="#contact" class="btn glow">Get My Fast Quote</a>
+          <a href="#services" class="btn outline">Explore Services</a>
+        </div>
+        <div class="muted" style="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;">
+          <span>4.9★ average</span> <span>Next‑day quotes</span> <span>Reliable arrival times</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust / benefits band under hero -->
+  <div class="band kpi-band">
+    <div class="container" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:center;">
+      <span class="kpi">🌿 Local Perth team</span>
+      <span class="kpi">📷 Before / after photos</span>
+      <span class="kpi">🛡️ Fully insured & police cleared</span>
+      <span class="kpi">⏱️ On‑time arrival windows</span>
+    </div>
+  </div>
+
+  <section id="services" class="container reveal">
+    <h2>Services</h2>
+    <p class="muted">Lawn, hedging, makeovers &amp; reticulation in NOR Perth.</p>
+    <div class="grid cards-3" style="margin-top:16px;">
+      <!-- Regular Garden Care (second URL) -->
+      <article class="service">
+        <div class="img-wrap aspect">
+          <img class="img" loading="lazy" decoding="async"
+               src="https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0"
+               alt="Regular garden care – lawn mowing, edging and hedging in Perth">
+        </div>
+        <div style="padding:16px;">
+          <h3 style="margin:0;">Regular Garden Care</h3>
+          <ul class="clean">
+            <li>✔ Lawn mowing & edging</li>
+            <li>✔ Hedging & pruning</li>
+            <li>✔ Weeding & green waste removal</li>
+          </ul>
+          <p class="muted" style="margin-top:8px;">Also in <a href="#areas" onclick="selectArea('bassendean')">Bassendean</a>, <a href="#areas" onclick="selectArea('bayswater')">Bayswater</a>, <a href="#areas" onclick="selectArea('dianella')">Dianella</a></p>
+          <div style="margin-top:12px;"><a class="btn outline" href="#contact" aria-label="Get a quote">Get a quote →</a></div>
+        </div>
+      </article>
+
+      <!-- Reticulation & Water-Wise (third URL) -->
+      <article class="service">
+        <div class="img-wrap aspect">
+          <img class="img" loading="lazy" decoding="async"
+               src="https://images.unsplash.com/photo-1699029673857-0dee179cc45a?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0"
+               alt="Reticulation repair — working sprinkler on Perth lawn">
+        </div>
+        <div style="padding:16px;">
+          <h3 style="margin:0;">Reticulation & Water‑Wise</h3>
+          <ul class="clean">
+            <li>✔ Repairs & valve checks</li>
+            <li>✔ Smart controllers</li>
+            <li>✔ Drip‑line conversions</li>
+          </ul>
+          <p class="muted" style="margin-top:8px;">Also in <a href="#areas" onclick="selectArea('bassendean')">Bassendean</a>, <a href="#areas" onclick="selectArea('bayswater')">Bayswater</a>, <a href="#areas" onclick="selectArea('dianella')">Dianella</a></p>
+          <div style="margin-top:12px;"><a class="btn outline" href="#contact" aria-label="Get a quote">Get a quote →</a></div>
+        </div>
+      </article>
+
+      <!-- Makeovers & Clean-ups (first URL) -->
+      <article class="service">
+        <div class="img-wrap aspect">
+          <img class="img" loading="lazy" decoding="async"
+               src="https://images.unsplash.com/photo-1589562760889-38898c71d3d8?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0"
+               alt="Garden makeover — fresh mulch and tidy beds in Perth">
+        </div>
+        <div style="padding:16px;">
+          <h3 style="margin:0;">Makeovers & Clean‑ups</h3>
+          <ul class="clean">
+            <li>✔ Mulch & soil refresh</li>
+            <li>✔ Garden bed redesign</li>
+            <li>✔ Pre‑sale spruce‑ups</li>
+          </ul>
+          <p class="muted" style="margin-top:8px;">Also in <a href="#areas" onclick="selectArea('bassendean')">Bassendean</a>, <a href="#areas" onclick="selectArea('bayswater')">Bayswater</a>, <a href="#areas" onclick="selectArea('dianella')">Dianella</a></p>
+          <div style="margin-top:12px;"><a class="btn outline" href="#contact" aria-label="Get a quote">Get a quote →</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <div class="band cta-band">
+    <div class="container cta">
+      <p class="muted" style="font-size:14px">Urgent tidy‑up or retic repair?</p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="tel:+61421308173" class="btn">Call 0421 308 173</a>
+        <a href="#contact" class="btn outline">Get a fast quote</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="process" class="container reveal">
+    <h2>How it works</h2>
+    <div class="grid cards-4" style="margin-top:16px;">
+      <div class="card"><div style="font-weight:800; color:var(--accent); font-size:24px;">1</div><div style="font-weight:700;">Quick quote</div><div class="muted">Send photos & address for same‑day pricing.</div></div>
+      <div class="card"><div style="font-weight:800; color:var(--accent); font-size:24px;">2</div><div style="font-weight:700;">Site check</div><div class="muted">We confirm scope, schedule & access.</div></div>
+      <div class="card"><div style="font-weight:800; color:var(--accent); font-size:24px;">3</div><div style="font-weight:700;">We get it done</div><div class="muted">On‑time, tidy, photo proof provided.</div></div>
+      <div class="card"><div style="font-weight:800; color:var(--accent); font-size:24px;">4</div><div style="font-weight:700;">Maintain</div><div class="muted">Set & forget regular care.</div></div>
+    </div>
+  </section>
+
+  <div class="section-div"></div>
+  <section id="areas" class="container reveal">
+    <div class="eyebrow">Local service areas (NOR)</div>
+    <h2>Areas we service — Bassendean, Bayswater &amp; Dianella (Perth NOR)</h2>
+    <p class="muted">Tap a suburb for popular services.</p>
+
+    <div class="tabs-wrap">
+      <div class="tabs" role="tablist" aria-label="Local suburbs">
+        <button class="tab active" role="tab" aria-selected="true" aria-controls="pane-bassendean" data-tab="bassendean">Bassendean</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="pane-bayswater" data-tab="bayswater">Bayswater</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="pane-dianella" data-tab="dianella">Dianella</button>
+      </div>
+    </div>
+
+    <div class="panes">
+      <div class="pane show" id="pane-bassendean" role="tabpanel" tabindex="0">
+        <div class="grid cards-2" style="margin-top:16px;">
+          <div class="card"><div style="font-weight:700;">Popular in Bassendean</div><ul class="clean"><li>✔ Lawn mowing &amp; edging</li><li>✔ Hedging &amp; pruning</li><li>✔ Reticulation repairs &amp; leak checks</li><li>✔ Mulch &amp; garden bed refresh</li></ul></div>
+          <div class="card"><div style="font-weight:700;">Fast quotes</div><div class="muted">Text photos &amp; address for same‑day pricing. We’ll confirm access and windows.</div></div>
+          <div class="card"><div style="font-weight:700;">Water‑wise</div><div class="muted">Smart controllers &amp; drip conversions to reduce water use while keeping lawns green.</div></div>
+          <div class="card"><div style="font-weight:700;">Insured &amp; cleared</div><div class="muted">Public liability cover, police clearance, invoices with job refs.</div></div>
+        </div>
+        <div style="margin-top:14px;"><a href="#contact" class="btn">Get a Bassendean quote</a></div>
+      </div>
+
+      <div class="pane" id="pane-bayswater" role="tabpanel" tabindex="0">
+        <div class="grid cards-2" style="margin-top:16px;">
+          <div class="card"><div style="font-weight:700;">Popular in Bayswater</div><ul class="clean"><li>✔ Verge &amp; lawn mowing</li><li>✔ Hedge shaping</li><li>✔ Reticulation troubleshooting</li><li>✔ Pre‑sale clean‑ups</li></ul></div>
+          <div class="card"><div style="font-weight:700;">Reliable windows</div><div class="muted">Set &amp; forget schedules — we notify you ahead and arrive within agreed windows.</div></div>
+          <div class="card"><div style="font-weight:700;">Compliance</div><div class="muted">Quotes &amp; variations in writing, photos stored, ABN on invoice.</div></div>
+          <div class="card"><div style="font-weight:700;">Friendly support</div><div class="muted">Text or email anytime — quick response during business hours.</div></div>
+        </div>
+        <div style="margin-top:14px;"><a href="#contact" class="btn">Get a Bayswater quote</a></div>
+      </div>
+
+      <div class="pane" id="pane-dianella" role="tabpanel" tabindex="0">
+        <div class="grid cards-2" style="margin-top:16px;">
+          <div class="card"><div style="font-weight:700;">Popular in Dianella</div><ul class="clean"><li>✔ Lawn mowing &amp; edging</li><li>✔ Hedge shaping &amp; pruning</li><li>✔ Reticulation repairs &amp; optimisation</li><li>✔ Mulch &amp; tidy makeovers</li></ul></div>
+          <div class="card"><div style="font-weight:700;">Reliable NOR runs</div><div class="muted">Regular windows around Dianella &amp; surrounding suburbs.</div></div>
+          <div class="card"><div style="font-weight:700;">Water‑wise setups</div><div class="muted">Smart controllers &amp; drip‑line conversions to cut water waste.</div></div>
+          <div class="card"><div style="font-weight:700;">Insured &amp; cleared</div><div class="muted">Public liability cover, police clearance, invoices with job refs.</div></div>
+        </div>
+        <div style="margin-top:14px;"><a href="#contact" class="btn">Get a Dianella quote</a></div>
+      </div>
+    </div>
+
+    
+  </section>
+
+  <section id="love" class="container reveal">
+    <div class="eyebrow">What locals say</div>
+    <h2>Loved by NOR homeowners &amp; managers</h2>
+    <div class="slider shadow" aria-label="Customer testimonials">
+      <div class="track" id="track">
+        <figure class="slide">
+          <div class="stars">★★★★★</div>
+          <blockquote class="quote">“Fast quote, on time, and the hedges have never looked this neat. Photos sent right after. Easy.”</blockquote>
+          <figcaption class="muted">— Sasha, Bassendean</figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="stars">★★★★★</div>
+          <blockquote class="quote">“Retic fixed same day. They found a hidden leak and set the controller properly. Lawn’s back.”</blockquote>
+          <figcaption class="muted">— Dan, Bayswater</figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="stars">★★★★★</div>
+          <blockquote class="quote">“Great for strata – clear invoices, photo reports and tidy crews. No chasing.”</blockquote>
+          <figcaption class="muted">— Priya, Dianella</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container reveal">
+    <h2>Request Booking / Fast Quote</h2>
+    <p class="muted">We’ll reply promptly with options and availability.</p>
+
+    <!-- Quick mobile contact card -->
+    <div class="grid" style="grid-template-columns: 1fr; gap:16px; margin:16px 0;">
+      <div class="card">
+        <div style="display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+          <div>
+            <div style="font-weight:700;">Prefer to call or text?</div>
+            <div class="muted">Mobile: <a class="muted" href="tel:+61421308173">0421 308 173</a> · <a class="muted" href="sms:+61421308173">SMS</a></div>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a href="tel:+61421308173" class="btn">Call 0421 308 173</a>
+            <a href="sms:+61421308173" class="btn outline">Text us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form onsubmit="event.preventDefault(); window.location.href='mailto:perthreticulationandirrigation@outlook.com?subject='+encodeURIComponent('New enquiry from '+(document.getElementById('name').value||'Website Visitor'))+'&body='+encodeURIComponent('Name: '+document.getElementById('name').value+'\nEmail: '+document.getElementById('email').value+'\nPhone: '+document.getElementById('phone').value+'\n\nMessage:\n'+document.getElementById('message').value+'\n\n— Sent from Perth Gardening and Reticulation website');" style="max-width:720px;">
+      <div class="grid" style="grid-template-columns: 1fr; gap:12px; margin-top:12px;">
+        <input id="name" required placeholder="Your name" style="border:1px solid var(--outline); border-radius:var(--radius); background:transparent; color:var(--text); padding:12px;">
+        <input id="email" type="email" required placeholder="Email" style="border:1px solid var(--outline); border-radius:var(--radius); background:transparent; color:var(--text); padding:12px;">
+        <input id="phone" placeholder="Phone (optional)" style="border:1px solid var(--outline); border-radius:var(--radius); background:transparent; color:var(--text); padding:12px;">
+        <textarea id="message" required placeholder="What do you need help with?" style="border:1px solid var(--outline); border-radius:var(--radius); background:transparent; color:var(--text); padding:12px; min-height:120px;"></textarea>
+        <button class="btn" type="submit">Send Email</button>
+      </div>
+      <div class="muted" style="margin-top:8px; display:flex; align-items:center; gap:8px;">
+        <span>📍 Perth NOR (North of the River), Western Australia</span>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+      <div>
+        <div style="font-weight:700;">Perth Gardening and Reticulation</div>
+        <div class="muted">Mon–Fri 8am–5pm · <a class="muted" href="mailto:perthreticulationandirrigation@outlook.com">Email us</a></div>
+      </div>
+      <div class="muted" style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="muted" href="#services">Services</a>
+        
+        <a class="muted" href="#process">Process</a>
+        
+        <a class="muted" href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-bar">
+    <a href="tel:+61421308173" class="btn">Call</a>
+    <a href="mailto:perthreticulationandirrigation@outlook.com" class="btn outline">Email</a>
+    <a href="#contact" class="btn">Quote</a>
+  </div>
+<script>
+  // Smooth internal links
+  document.addEventListener('click', function(e){
+    const link = e.target.closest('a[href^="#"]');
+    if(!link) return;
+    const id = link.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+  });
+  // Mailto guard
+  document.querySelectorAll('a[href^="mailto:"]').forEach(a=>{
+    a.addEventListener('click', ()=>{ setTimeout(()=>{ console.log('If your email app did not open, send to: perthreticulationandirrigation@outlook.com'); }, 500); });
+  });
+  // Tabs logic for Areas section
+  document.querySelectorAll('.tabs .tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tabs .tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = btn.dataset.tab;
+      document.querySelectorAll('.panes .pane').forEach(p => p.classList.remove('show'));
+      const pane = document.getElementById('pane-' + target);
+      if (pane) pane.classList.add('show');
+      if (window.innerWidth < 700) { pane.scrollIntoView({behavior:'smooth', block:'start'}); }
+    });
+  });
+  function selectArea(area){
+    document.querySelectorAll('.tabs .tab').forEach(b=>b.classList.remove('active'));
+    const btn=document.querySelector(`.tabs .tab[data-tab="${area}"]`);
+    if(btn){ btn.classList.add('active'); }
+    document.querySelectorAll('.panes .pane').forEach(p=>p.classList.remove('show'));
+    const pane=document.getElementById('pane-'+area);
+    if(pane){ pane.classList.add('show'); if (window.innerWidth < 700) pane.scrollIntoView({behavior:'smooth', block:'start'}); }
+  }
+  // Reveal on scroll
+  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll('section').forEach(s=>{s.classList.add('reveal');obs.observe(s)});
+  // Scroll progress
+  const bar=document.getElementById('progress');
+  const setProg=()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;bar.style.width=p+"%"};
+  setProg();window.addEventListener('scroll',setProg,{passive:true});
+  // Testimonials slider
+  (function(){const track=document.getElementById('track');if(!track) return;let i=0;const len=track.children.length;setInterval(()=>{i=(i+1)%len;track.style.transform=`translateX(-${i*100}%)`},5000);})();
+</script>
+</body>
+</html>
